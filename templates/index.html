@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>AUI Mod Helper</h1>
+    </header>
+
+    <div class="container">
+        <input type="text" id="userId" placeholder="User ID">
+        <button id="getManualLogReport">Get Manual Log Report</button>
+        <!-- <button>Test Button 2</button>
+        <button>Test Button 3</button> -->
+        <textarea id="mainTextField" placeholder="Log details will appear here..."></textarea>
+        
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup-form" id="popupForm">
+        <input type="text" id="offence" placeholder="Offence">
+        <input type="text" id="action" placeholder="Action">
+        <input type="text" id="advice" placeholder="Advice">
+        <input type="text" id="rm" placeholder="RM IDs (space-separated)">
+        <button id="submitReport">Submit Report</button>
+    </div>
+
+    <footer class="footer">
+        <p>Created By: Spooky</p>
+        <p>Discord ID: 573023459907469324</p>
+        <p>For any issues contact via Discord</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

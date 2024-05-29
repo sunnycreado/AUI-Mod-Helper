@@ -35,7 +35,7 @@ document.getElementById('submitReport').addEventListener('click', function() {
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('User not found');
+            throw new Error(`User not found response failure ${response}`);
         }
         return response.json();
     })
@@ -59,7 +59,7 @@ document.getElementById('submitReport').addEventListener('click', function() {
         document.getElementById('rm').value = '';
     })
     .catch(error => {
-        document.getElementById('mainTextField').value = "User not found";
+        document.getElementById('mainTextField').value = "User not found catch";
         document.getElementById('popupForm').classList.remove('active');
         document.getElementById('overlay').classList.remove('active');
         console.error('Error:', error);

@@ -59,7 +59,7 @@ document.getElementById('submitReport').addEventListener('click', function() {
         document.getElementById('rm').value = '';
     })
     .catch(error => {
-        document.getElementById('mainTextField').value = "User not found catch";
+        document.getElementById('mainTextField').value = `User not found catch ${error}`;
         document.getElementById('popupForm').classList.remove('active');
         document.getElementById('overlay').classList.remove('active');
         console.error('Error:', error);

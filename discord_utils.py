@@ -1,18 +1,16 @@
 import requests
 import os
 
-DISCORD_TOKEN  = os.environ.get('DISCORD_BOT_TOKEN')
-print(DISCORD_TOKEN)
+
+
 
 class DiscordUtils():
 
 
-    def get_discord_token(self):
-        return DISCORD_TOKEN
 
     def get_client_info_json(self,user_id):
         
-        token = self.get_discord_token()
+        token = os.environ.get('DISCORD_BOT_TOKEN')
 
         url = f'https://discord.com/api/v9/users/{user_id}'
 

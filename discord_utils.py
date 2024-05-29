@@ -2,6 +2,7 @@ import requests
 import os
 
 DISCORD_TOKEN  = os.environ.get('DISCORD_BOT_TOKEN')
+print(DISCORD_TOKEN)
 
 class DiscordUtils():
 

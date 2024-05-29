@@ -41,7 +41,7 @@ document.getElementById('submitReport').addEventListener('click', function() {
     })
     .then(data => {
         if (data.error) {
-            document.getElementById('mainTextField').value = "User not found";
+            document.getElementById('mainTextField').value = `User not found ${data.error} `;
         } else {
             let formattedData = `${data.user_id}\n<@${data.user_id}>\n${data.username}\n\n`;
             if (data.report.offence) formattedData += `Offence: ${data.report.offence}\n`;

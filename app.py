@@ -22,7 +22,7 @@ def submit_report():
         user_data_json = dcutils.get_client_info_json(user_id)
         username = user_data_json['username']
     except Exception as e:
-        return jsonify({"error": "User not found"}), 404
+        return jsonify({"error": f"User not found {e}"}), 404
 
     
 
@@ -39,4 +39,5 @@ def submit_report():
 
     return jsonify(formatted_data)
 
-
+if __name__ == '__main__':
+    app.run(debug=True)
